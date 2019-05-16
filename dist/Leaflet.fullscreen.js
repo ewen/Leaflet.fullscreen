@@ -33,6 +33,8 @@
             this._toggleTitle();
 
             L.DomEvent.on(this.link, 'click', this._click, this);
+            L.DomEvent.on(this.link, 'mousedown', L.DomEvent.stopPropagation);
+            L.DomEvent.on(this.link, 'pointerdown', L.DomEvent.stopPropagation);
 
             return container;
         },
